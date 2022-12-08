@@ -1,0 +1,194 @@
+---
+import CallToAction from './CallToAction.astro';
+import intro1 from '/img/intro-1.jpg';
+import intro2 from '/img/intro-2.jpg';
+import intro3 from '/img/intro-3.jpg';
+import intro4 from '/img/intro-4.jpg';
+import intro5 from '/img/intro-5.jpg';
+
+import logo1 from '/img/logo-1.jpg';
+import logo2 from '/img/logo-2.jpg';
+import logo3 from '/img/logo-3.jpg';
+import logo4 from '/img/logo-4.jpg';
+import logo5 from '/img/logo-5.jpg';
+import logo6 from '/img/logo-6.jpg';
+import logo7 from '/img/logo-7.jpg';
+import logo8 from '/img/logo-8.jpg';
+
+const intros = [
+  {
+    img: {
+      src: `${intro1}`,
+      alt: 'ミーティング'
+    },
+    title: 'ミーティング',
+    type: 'Business Skill',
+    level: 'TOEIC600点～',
+    content: `
+      <ul>
+        <li><span>ミーティングにおける英語表現、ファシリテーション、論理展開などを習得</span></li>
+        <li><span>論理的かつ説得力を持った意見を伝える英語スキルの習得</span></li>
+        <li><span>ビジネスの現場に即したシミュレーションで実践力を養成</span></li>
+      </ul>
+    `
+  },
+  {
+    img: {
+      src: `${intro2}`,
+      alt: 'プレゼンテーション'
+    },
+    title: 'プレゼンテーション',
+    type: 'Business Skill',
+    level: 'TOEIC600点～',
+    content: `
+      <ul>
+        <li><span>欧米式プレゼンテーションの構成、表現、論理展開、資料作成の方法を習得</span></li>
+        <li><span>聞き手にインパクトを与える効果的なプレゼンテーションスキルの養成</span></li>
+        <li><span>効果的なボディーランゲージ、アイコンタクトなどのデリバリースキルの強化</span></li>
+      </ul>
+    `
+  },
+  {
+    img: {
+      src: `${intro3}`,
+      alt: 'リーダーシップ'
+    },
+    title: 'リーダーシップ',
+    type: 'Business Skill',
+    level: 'TOEIC600点～',
+    content: `
+      <ul>
+        <li><span>Leadershipをテーマとしてマネジメント英語への知識を深める</span></li>
+        <li><span>リーダーシップの概念を自分の言葉として語れる力を習得</span></li>
+        <li><span>意見を述べる、意見を聞く、相互理解を深めるなど、マネジメント・コミュニケーション力の基礎を養成</span></li>
+      </ul>
+    `
+  },
+  {
+    img: {
+      src: `${intro4}`,
+      alt: 'ビジネス英語コミュニケーション'
+    },
+    title: 'ビジネスコミュニケーション',
+    type: 'Business Communication',
+    level: 'TOEIC600点～',
+    content: `
+      <ul>
+        <li><span>英語を機能別に学ぶ独自の発話トレーニングでビジネスで使える表現を習得</span></li>
+        <li><span>積極的かつ論理的に話を展開できるビジネス英語コミュニケーション力の養成</span></li>
+        <li><span>実務を想定した演習で、自信を持って話せる「使える英語」を定着させる</span></li>
+      </ul>
+    `
+  },
+  {
+    img: {
+      src: `${intro5}`,
+      alt: 'Creative クリエイティブスピーキング'
+    },
+    title: 'クリエイティブスピーキング',
+    type: 'Speaking Skills',
+    level: 'TOEIC600～730点程度',
+    content: `
+      <ul>
+        <li><span>自身の英語知識を活かし「英語で言いた いことが言える」ようになるためのプログラム</span></li>
+        <li><span>描写する、提案する、比較するといった「言語機能」に基づいた独自の発話トレーニング</span></li>
+        <li><span>圧倒的な発話時間の確保と的確なフィードバックにより効率よくスピーキング力を強化</span></li>
+      </ul>
+    `
+  }
+];
+---
+
+<section class="bg-white py-10 md:py-20">
+  <div class="max-w-[1040px] mx-auto px-5 relative z-10">
+    <div class="space-y-10">
+      <h2 class="text-center font-bold text-2xl md:text-3xl">
+        アルクは英語研修実績<span class="text-[#00719B]">3,800社以上</span>
+      </h2>
+      <ul class="flex flex-wrap items-center justify-center gap-y-2 gap-x-8">
+        <li>
+          <img src={logo1} alt="logo-1" width="90" height="64" />
+        </li>
+        <li>
+          <img src={logo2} alt="logo-2" width="75" height="33" />
+        </li>
+        <li>
+          <img src={logo3} alt="logo-3" width="95" height="50" />
+        </li>
+        <li>
+          <img src={logo4} alt="logo-4" width="61" height="40" />
+        </li>
+        <li>
+          <img src={logo5} alt="logo-5" width="76" height="50" />
+        </li>
+        <li>
+          <img src={logo6} alt="logo-6" width="75" height="40" />
+        </li>
+        <li>
+          <img src={logo7} alt="logo-7" width="89" height="37" />
+        </li>
+        <li>
+          <img src={logo8} alt="logo-8" width="65" height="42" />
+        </li>
+      </ul>
+      <div class="w-full max-w-[240px] mx-auto h-0.5 bg-[#FFBE00]"></div>
+    </div>
+
+    <div class="h-10 md:h-20"></div>
+
+    <header class="mb-10 space-y-4">
+      <h2 class="font-bold text-3xl md:text-4xl">
+        <small class="block font-medium text-[0.5em]"
+          >アルクの法人向けオンライン・ビジネス英語スクール「ALC Class
+          Unlimited」は</small
+        >
+        5つのコースのレッスンが<span class="text-[#00719B]">受講し放題</span>
+      </h2>
+      <p>
+        さまざまな・ニーズ・スケジュールに適応。<br />1コース 1時間×8回で構成。<br
+        />海外赴任候補者、グローバル人材育成などに最適です。
+      </p>
+    </header>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      {
+        intros.map((item) => (
+          <div class="space-y-2">
+            <img class="block w-full" src={item.img.src} alt={item.img.alt} />
+            <h3
+              class="font-quicksand text-xl text-[#00719B] border-b-2 border-[#FFBE00] font-bold pb-2 md:text-2xl md:leading-tight md:flex md:items-center"
+              set:html={item.title}
+            />
+            <ul class="text-sm text-[#707070] space-y-1">
+              <li set:html={item.type} />
+              <li>
+                対象レベル：
+                <span set:html={item.level} />
+              </li>
+            </ul>
+            <div
+              class="[&_ul]:space-y-2 [&_li]:flex [&_li]:before:flex-none [&_li]:before:content-['・']"
+              set:html={item.content}
+            />
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="h-10 md:h-20"></div>
+
+    <div class="text-center text-[#093557] space-y-4 md:py-10 md:space-y-8">
+      <h4 class="font-bold text-xl md:text-2xl">
+        各レッスンの詳しい説明はこちら
+      </h4>
+      <p>
+        <a
+          class="flex items-center justify-center h-12 px-4 mx-auto max-w-[360px] rounded-full bg-[#093557] text-white text-base font-bold md:text-xl md:h-16"
+          href="#target-contact-form">資料ダウンロード（無料）</a
+        >
+      </p>
+    </div>
+  </div>
+</section>
+
+<CallToAction />

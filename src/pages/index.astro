@@ -1,0 +1,87 @@
+---
+import TopBanner from '../components/TopBanner.astro';
+import Introduction from '../components/Introduction.astro';
+import Feature from '../components/Feature.astro';
+import Price from '../components/Price.astro';
+import UserVoice from '../components/UserVoice.astro';
+import Contact from '../components/Contact.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+import favicon from '/favicon.png';
+import ogp from '/ogp.png';
+---
+
+<html lang="ja" class="scroll-smooth scroll-p-20">
+  <head>
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KRLNZXL');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8" />
+    <link href={favicon} rel="icon" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>
+      ALC Class Unlimited
+      法人向けオンライン・ビジネス英語スクール【英語研修のアルク】
+    </title>
+
+    <meta
+      name="description"
+      content="アルクの 法人向けオンライン・ビジネス英語スクールALC Class Unlimitedでは、1名から育成可能。英語レベル・ニーズ・スケジュールに合わせて受講し放題。採用率が４％の法人研修専門の講師が研修を担当し、海外赴任候補者、グローバル人材育成などに最適です。"
+    />
+
+    <meta
+      property="og:title"
+      content="ALC Class Unlimited 法人向けオンライン・ビジネス英語スクール【英語研修のアルク】"
+    />
+    <meta
+      property="og:description"
+      content="アルクの 法人向けオンライン・ビジネス英語スクールALC Class Unlimitedでは、1名から育成可能。英語レベル・ニーズ・スケジュールに合わせて受講し放題。採用率が４％の法人研修専門の講師が研修を担当し、海外赴任候補者、グローバル人材育成などに最適です。"
+    />
+    <meta property="og:image" content={ogp} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Quicksand:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script is:inline src="https://sdk.form.run/js/v2/formrun.js"></script>
+  </head>
+
+  <body class="font-noto bg-slate-800 antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KRLNZXL"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <main class="site-content">
+      <TopBanner />
+      <Introduction />
+      <Feature />
+      <UserVoice />
+      <Price />
+      <Contact />
+    </main>
+
+    <SiteFooter />
+  </body>
+</html>

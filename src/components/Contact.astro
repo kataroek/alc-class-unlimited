@@ -1,0 +1,41 @@
+---
+import CallToAction from './CallToAction.astro';
+import FormRun from './FormRun.astro';
+---
+
+<section id="target-contact-form" class="bg-white py-10 md:py-0">
+  <div class="max-w-[1040px] mx-auto px-5 relative z-10">
+    <div
+      class="md:flex md:flex-row-reverse md:gap-10 md:justify-between md:items-center lg:gap-20"
+    >
+      <div
+        class="-mt-10 -mx-5 py-10 px-5 bg-[#F4F4F4] md:m-0 md:px-5 md:w-1/2 md:max-w-[420px] md:flex-none md:grid md:place-content-center"
+      >
+        <FormRun />
+      </div>
+      <div class="space-y-4 py-4">
+        <h2 class="font-bold text-xl md:text-[22px]">
+          <small class="block text-sm md:text-base"
+            >「ALC Class Unlimited」のサービス内容について</small
+          >
+          詳しく説明した資料を<span class="text-[#FF914D]">無料</span
+          >でお配りしています
+        </h2>
+        <img
+          src="img/contact-img.jpg"
+          alt="詳しく説明した資料を無料でお配りしています"
+        />
+        <h3 class="font-medium">こんな方におすすめです</h3>
+        <ul
+          class="space-y-2 [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:before:w-2 [&>li]:before:h-2 [&>li]:before:bg-[#FF914D] [&>li]:before:block"
+        >
+          <li>社員向けの英語研修サービスを探している</li>
+          <li>海外赴任候補者に短期間で実践的な学習をさせたい</li>
+          <li>自己学習だけでは英語が伸びない社員がいる</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<CallToAction />

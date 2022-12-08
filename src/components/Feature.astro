@@ -1,0 +1,99 @@
+---
+import feature1 from '/img/feature-1.jpg';
+import feature2 from '/img/feature-2.jpg';
+import feature3 from '/img/feature-3.jpg';
+import feature4 from '/img/feature-4.jpg';
+
+const features = [
+  {
+    img: {
+      src: `${feature1}`,
+      alt: '受講意欲に応じた受け放題システム'
+    },
+    title: '受講意欲に応じた受け放題システム',
+    subTitle: '納得がいくまで何度でも<br>同じレッスンの受講が可能。',
+    content:
+      '<p>受講レッスン数の制限が無いので、幅広くコースを受講することもできますし、しっかり理解できるまで何回でも同じレッスンにとことんチャレンジすることも可能です。自信を持って「できる」と思えるまでレッスンを使い倒してください。</p><p>レッスンは曜日や時間を固定したものではなく、受講者それぞれが予約システムを通じて受講枠の中から自由に予約できるため、研修ご担当者様のスケジュール調整は不要です。</p>'
+  },
+  {
+    img: {
+      src: `${feature2}`,
+      alt: '最大限の成果を導くレッスン構成'
+    },
+    title: '最大限の成果を導くレッスン構成',
+    subTitle: '事前学習は必須！<br>完全アウトプット主体のレッスンを実現　',
+    content:
+      '<p>レッスンの成果を最大限にするために、レッスンでのアクティビティ、ディスカッションに必要な知識の習得と準備を事前に行うことを必須にしています。レッスンは実践的なアウトプット形式となり、学んだことを実践で使えるようになるまで繰り返し練習することができます。</p>'
+  },
+  {
+    img: {
+      src: `${feature3}`,
+      alt: '刺激的なレッスン環境と講師の高い指導力'
+    },
+    title: '刺激的なレッスン環境と講師の高い指導力',
+    subTitle:
+      '他社社員とのレッスンや厳選された講師の指導で、受講生の自己研鑽を後押し。',
+    content:
+      '<p>企業での豊富な英語指導経験を持つ採用率4％の法人研修専門の講師が担当します。講師陣は、受講生の考えを引き出すファシリテーション・フィードバックで、受講生を自律的な学習者へと導いていきます。</p><p>さらに、レッスンには、弊社との契約がある様々な企業のビジネスパーソンが参加します。少しの緊張感を持ちながら実践力を鍛えることができ、受講者の自己研鑽を後押しする環境が揃っています。</p>'
+  },
+  {
+    img: {
+      src: `${feature4}`,
+      alt: '「英会話ができる」で終わらせない'
+    },
+    title: '「英会話ができる」で終わらせない',
+    subTitle: 'グローバルで活躍できる<br>真のビジネススキルを身につける。',
+    content:
+      '<p>約30年間、法人専門で特化し、また、数多くの企業の新入社員～エグゼクティブに支持され続けてきたビジネススキル、ビジネスコミュニケーションからコースを厳選しています。貴社社員を「英会話ができる」レベルより更に上の、「英語で実践的にビジネスができる」ステージに引き上げます。</p>'
+  }
+];
+---
+
+<section
+  class="bg-white overflow-hidden relative py-10 after:bg-[#F4F4F4] after:absolute after:right-0 after:bottom-0 after:h-[calc(100%-200px)] after:w-2/3 md:py-20"
+>
+  <div class="max-w-[1040px] mx-auto px-5 relative z-10">
+    <header class="mb-10">
+      <h2 class="font-bold text-3xl md:text-4xl">
+        <small
+          class="block font-quicksand font-medium text-[#00719B] text-[0.5em]"
+          >Feature</small
+        >
+        <span class="block"
+          >ALC Class Unlimited<span class="font-medium text-[#00719B]"
+            >の特長</span
+          >
+        </span>
+      </h2>
+    </header>
+
+    <div class="max-w-[900px] mx-auto">
+      <div class="pt-20 grid gap-10 [counter-reset:feature]">
+        {
+          features.map((item) => (
+            <div class="space-y-10 relative md:space-y-0 md:flex md:gap-16 md:even:flex-row-reverse">
+              <div class="md:flex-none md:w-[420px]">
+                <img src={item.img.src} alt={item.img.alt} />
+              </div>
+              <div class="relative py-6 [counter-increment:feature] after:font-quicksand after:content-[counter(feature,decimal-leading-zero)] after:font-medium after:text-[#00719B]/20 after:leading-none after:absolute after:-left-10 after:-top-10 after:text-[140px] ">
+                <div class="space-y-2 relative z-10">
+                  <h3 class="font-bold text-lg md:text-xl">
+                    <span
+                      class="inline-block px-2 py-0.5 bg-[#00719B] text-white"
+                      set:html={item.title}
+                    />
+                  </h3>
+                  <h4
+                    class="text-[#00719B] font-bold text-base md:text-lg"
+                    set:html={item.subTitle}
+                  />
+                  <div set:html={item.content} />
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

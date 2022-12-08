@@ -1,0 +1,134 @@
+---
+import CallToAction from './CallToAction.astro';
+---
+
+<style>
+  th,
+  td {
+    @apply border border-[#CACACA] p-2 md:p-4;
+  }
+  th {
+    @apply bg-[#262626] text-white font-medium;
+  }
+
+  tbody {
+    tr {
+      @apply even:bg-[#F2F5FB];
+    }
+  }
+</style>
+
+<section class="bg-white py-10 md:py-20">
+  <div class="max-w-[1040px] mx-auto px-5">
+    <header class="mb-10">
+      <h2 class="font-bold text-3xl md:text-4xl">
+        <small
+          class="block font-quicksand font-medium text-[#00719B] text-[0.5em]"
+          >Price</small
+        >
+        <span class="block"
+          >料金プラン <small class="text-lg md:text-2xl"
+            >（受講期間：6か月）</small
+          >
+        </span>
+        <span class="block text-lg md:text-2xl"
+          >1名から低コストで提供します。</span
+        >
+      </h2>
+    </header>
+    <div class="max-w-[900px] mx-auto space-y-10">
+      <div class="space-y-2">
+        <table class="border-collapse w-full">
+          <thead>
+            <tr>
+              <th>コース名</th>
+              <th>料金</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1名</td>
+              <td>120,000円/名<br class="md:hidden" />（月あたり20,000円）</td>
+            </tr>
+            <tr>
+              <td>5名〜</td>
+              <td>108,000円/名<br class="md:hidden" />（月あたり18,000円）</td>
+            </tr>
+            <tr>
+              <td>10名〜</td>
+              <td>102,000円/名<br class="md:hidden" />（月あたり17,000円）</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-right text-sm">※表示価格は全て税抜価格となります</div>
+      </div>
+
+      <div class="text-center text-[#093557] space-y-4 md:py-10 md:space-y-8">
+        <h4 class="font-bold text-xl md:text-2xl">
+          価格について詳しくはこちら
+        </h4>
+        <p>
+          <a
+            class="flex items-center justify-center h-12 px-4 mx-auto max-w-[360px] rounded-full bg-[#093557] text-white text-base font-bold md:text-xl md:h-16"
+            href="#target-contact-form">資料ダウンロード（無料）</a
+          >
+        </p>
+      </div>
+
+      <div
+        class="rounded-3xl border-4 border-[#FFD866] bg-[#FFD866] overflow-hidden"
+      >
+        <div class="p-2 bg-white text-center font-bold">
+          <h3 class="text-lg md:text-[22px]">開講キャンペーン実施中!</h3>
+          <h4 class="flex items-center justify-center gap-2 md:text-xl">
+            <span
+              class="text-xs tracking-widest py-0.5 px-2 text-white bg-[#113557] rounded"
+              >期間限定</span
+            >
+            <span>2023年1月20日まで</span>
+          </h4>
+        </div>
+        <div class="py-10 space-y-2 md:space-y-4">
+          <div
+            class="text-center space-y-2 md:space-y-0 md:flex md:items-center md:justify-center md:gap-2 lg:gap-1 xl:gap-3"
+          >
+            <span class="inline-flex items-center gap-1">
+              ［1名様/6か月間］<strong class="text-2xl xl:text-3xl">12</strong
+              >万円（税抜）
+            </span>
+
+            <svg
+              class="mx-auto rotate-90 md:rotate-0 md:m-0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="32"
+              viewBox="0 0 30 32"
+            >
+              <path
+                id="Union_1"
+                data-name="Union 1"
+                d="M-1701.961-130.116H-1713v-15.6h11.038V-154L-1683-138l-18.962,16Z"
+                transform="translate(1713 154)"
+                fill="#093557"></path>
+            </svg>
+
+            <span
+              class="leading-none inline-flex gap-1 items-center bg-[linear-gradient(to_top,#fff_0,#fff_20px,transparent_20px)]"
+            >
+              <span class="font-bold text-xl md:text-2xl lg:text-3xl"
+                >キャンペーン価格</span
+              >
+              <span class="font-bold text-4xl xl:text-[44px]">9</span>
+              <small class="text-sm self-end xl:text-base">万円（税抜）</small>
+            </span>
+          </div>
+          <div class="text-center text-sm font-bold md:text-base">
+            詳しくはお問い合わせください
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<CallToAction />

@@ -1,0 +1,255 @@
+---
+import FormRun from './FormRun.astro';
+---
+
+<style>
+  .tagline {
+    @media screen and (max-height: 760px) {
+      @apply text-[clamp(14px,3vh,24px)] leading-[2.2em];
+    }
+  }
+  .banner-content {
+    @media screen and (max-height: 760px) {
+      @apply space-y-4 py-4;
+    }
+  }
+
+  .tagline-header {
+    @media screen and (max-height: 760px) {
+      @apply space-y-0;
+
+      span:nth-child(1) {
+        @apply text-[clamp(14px,3vh,24px)];
+      }
+
+      span:nth-child(2) {
+        @apply text-[clamp(48px,8vh,60px)];
+      }
+    }
+  }
+</style>
+
+<div
+  class="w-full max-w-[2000px] mx-auto md:flex md:flex-col md:landscape:min-h-screen xl:portrait:max-h-[800px]"
+>
+  <div class="flex md:flex-auto">
+    <div
+      class="flex-auto bg-[url('/img/banner-img.jpg')] bg-no-repeat bg-[60%_50px] bg-cover md:bg-[60%_top] lg:bg-right-top"
+    >
+      <div class="px-5 py-2.5 bg-white">
+        <img
+          class="w-[102px]"
+          src="img/logo-alc.png"
+          width="140"
+          height="44"
+          alt="アルク"
+        />
+      </div>
+
+      <div class="pt-4 text-white md:pt-8">
+        <span
+          class="tagline text-base leading-[2.4em] bg-[#00719B] p-2 py-1 box-decoration-clone md:pl-6 md:text-xl md:leading-[2em] xl:text-[22px] xl:leading-[2em]"
+        >
+          「英会話ができる」で終わらせない、<br />グローバルで活躍できる<strong
+            class="font-black">真のビジネススキル</strong
+          >を。
+        </span>
+        <div class="banner-content p-5 space-y-5 md:space-y-8 md:p-8">
+          <h1 class="tagline-header space-y-2 md:space-y-4">
+            <span class="font-medium block md:text-xl xl:text-2xl">
+              法人向けオンライン・ビジネス英語スクール
+            </span>
+            <span class="block font-bold text-4xl md:text-5xl xl:text-6xl"
+              >ALC <br class="md:hidden" />Class Unlimited</span
+            >
+          </h1>
+          <ul class="flex gap-2 text-black pt-4 md:gap-4 md:p-0">
+            <li class="flex-1 max-w-[180px]">
+              <div
+                class="rounded-lg border text-center p-2 bg-white md:p-2 xl:p-4"
+              >
+                <h2 class="font-bold text-sm md:text-base">
+                  <span
+                    class="bg-[linear-gradient(to_top,#FFD866_0,#FFD866_8px,transparent_8px)]"
+                  >
+                    英語研修<br />導入実績
+                  </span>
+                </h2>
+                <p class="text-[10px] md:text-lg">
+                  <span class="font-bold text-[#FFBE00] text-lg md:text-3xl"
+                    >3,800</span
+                  > 社以上
+                </p>
+              </div>
+            </li>
+            <li class="flex-1 max-w-[180px]">
+              <div
+                class="rounded-lg border text-center p-2 bg-white md:p-2 xl:p-4"
+              >
+                <h2 class="font-bold text-sm md:text-base">
+                  <span
+                    class="bg-[linear-gradient(to_top,#FFD866_0,#FFD866_8px,transparent_8px)]"
+                  >
+                    英語研修<br />受講生満足度
+                  </span>
+                </h2>
+                <p class="text-[10px] md:text-lg">
+                  <span class="font-bold text-[#FFBE00] text-lg md:text-3xl"
+                    >95</span
+                  > %以上
+                </p>
+              </div>
+            </li>
+            <li class="flex-1 max-w-[180px]">
+              <div
+                class="rounded-lg border text-center p-2 bg-white md:p-2 xl:p-4"
+              >
+                <h2 class="font-bold text-sm md:text-base">
+                  <span
+                    class="bg-[linear-gradient(to_top,#FFD866_0,#FFD866_8px,transparent_8px)]"
+                  >
+                    英語教育<br />提供実績
+                  </span>
+                </h2>
+                <p class="text-[10px] md:text-lg">
+                  <span class="font-bold text-[#FFBE00] text-lg md:text-3xl"
+                    >30</span
+                  >
+                  年
+                </p>
+              </div>
+            </li>
+          </ul>
+          <a
+            class="js-form-trigger shadow-md shadow-black/20 font-bold bg-[#FFD866] hover:bg-[#FFBE00] text-black text-center flex items-center justify-center h-12 w-full max-w-[400px] mx-auto lg:hidden"
+            href="#">まずは資料請求（1分）</a
+          >
+          <ul
+            class="text-sm space-y-2 lg:space-y-1 md:text-base lg:text-sm xl:text-lg"
+          >
+            <li
+              class="flex items-baseline gap-4 before:w-2 before:h-2 before:bg-[#FFBE00] before:relative before:-top-0.5 before:flex-none"
+            >
+              1名から育成可能。英語レベル・ニーズ・スケジュールに合わせて受講し放題
+            </li>
+            <li
+              class="flex items-baseline gap-4 before:w-2 before:h-2 before:bg-[#FFBE00] before:relative before:-top-0.5 before:flex-none"
+            >
+              採用率４％ 法人研修専門の講師が担当
+            </li>
+            <li
+              class="flex items-baseline gap-4 before:w-2 before:h-2 before:bg-[#FFBE00] before:relative before:-top-0.5 before:flex-none"
+            >
+              海外赴任候補者、グローバル人材育成などに最適
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      id="contact-form"
+      class="fixed z-40 overflow-auto right-0 top-0 w-full h-full translate-x-full bg-[#F4F4F4] p-5 py-10 transition-all duration-500 ease-in-out [&.active]:translate-x-0 sm:p-8 sm:max-w-[440px] md:py-5 lg:grid lg:place-content-center lg:static lg:translate-x-0 lg:h-auto lg:py-4 xl:px-10"
+    >
+      <FormRun />
+      <div class="pt-8 lg:hidden">
+        <a class="js-close-form inline-flex gap-2 items-center" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="20"
+            viewBox="0 0 10 20"
+          >
+            <path
+              id="Polygon_3"
+              data-name="Polygon 3"
+              d="M10,0,20,10H0Z"
+              transform="translate(0 20) rotate(-90)"
+              fill="#707070"></path>
+          </svg>
+          戻る
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#FFBE00] p-4 lg:py-2 2xl:px-12">
+    <div
+      class="text-center space-y-2.5 lg:space-y-0 lg:text-left lg:flex lg:items-center lg:justify-center lg:gap-4"
+    >
+      <div
+        class="inline-block text-center whitespace-nowrap text-[#093557] rounded-lg bg-white leading-none py-2 px-6 space-y-1"
+      >
+        <div class="font-bold text-lg md:text-xl lg:text-[22px]">
+          開講キャンペーン実施中!
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <span
+            class="text-[10px] tracking-widest py-1 px-2 text-white bg-[#113557] rounded"
+            >期間限定</span
+          >
+          <span class="text-sm">2023年1月20日まで</span>
+        </div>
+      </div>
+
+      <div
+        class="text-center space-y-2 md:space-y-0 md:flex md:items-center md:justify-center md:gap-2 lg:gap-1 xl:gap-3"
+      >
+        <span class="inline-flex items-center gap-1">
+          ［1名様/6か月間］<strong class="text-2xl xl:text-3xl">12</strong
+          >万円（税抜）
+        </span>
+
+        <svg
+          class="mx-auto rotate-90 md:rotate-0 md:m-0"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="32"
+          viewBox="0 0 30 32"
+        >
+          <path
+            id="Union_1"
+            data-name="Union 1"
+            d="M-1701.961-130.116H-1713v-15.6h11.038V-154L-1683-138l-18.962,16Z"
+            transform="translate(1713 154)"
+            fill="#093557"></path>
+        </svg>
+
+        <span
+          class="leading-none inline-flex gap-1 items-center bg-[linear-gradient(to_top,#fff_0,#fff_20px,transparent_20px)]"
+        >
+          <span class="font-bold text-xl md:text-2xl lg:text-3xl"
+            >キャンペーン価格</span
+          >
+          <span class="font-bold text-4xl xl:text-[44px]">9</span>
+          <small class="text-sm self-end xl:text-base">万円（税抜）</small>
+        </span>
+      </div>
+
+      <div class="text-sm font-medium lg:text-xs xl:text-base xl:leading-snug">
+        <!-- <span class="lg:hidden">詳しくはお問い合わせください</span>
+            <span class="hidden lg:inline">
+              詳しくは上記のフォームより<br />お問い合わせください
+            </span> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const formTrigger = document.querySelector('.js-form-trigger') as HTMLElement;
+  const closeForm = document.querySelector('.js-close-form') as HTMLElement;
+  const contactForm = document.querySelector('#contact-form') as HTMLElement;
+
+  if (formTrigger) {
+    formTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      contactForm.classList.toggle('active');
+    });
+  }
+
+  if (closeForm) {
+    closeForm.addEventListener('click', (e) => {
+      e.preventDefault();
+      contactForm.classList.remove('active');
+    });
+  }
+</script>

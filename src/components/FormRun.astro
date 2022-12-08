@@ -1,0 +1,173 @@
+---
+const textAccent = '#093557';
+const buttonText = '#000';
+const buttonBG = '#FFD866';
+const buttonActive = '#FFBE00';
+---
+
+<style define:vars={{ textAccent, buttonText, buttonBG, buttonActive }}>
+  ._formrun_gotcha {
+    @apply !absolute h-px w-px overflow-hidden;
+  }
+
+  .form-row {
+    @apply my-4 space-y-1;
+  }
+
+  label {
+    @apply text-xs flex items-center gap-2 cursor-pointer;
+  }
+
+  input:not([type='checkbox']),
+  select {
+    @apply block w-full bg-white border border-[#BFBFBF] p-2.5 rounded-none placeholder:text-[#C4C4C4] text-sm;
+  }
+
+  .badge-req {
+    @apply inline-block py-0.5 px-1.5 leading-none font-bold text-[10px] text-[var(--textAccent)] border border-current;
+  }
+
+  .form-action {
+    @apply my-4;
+  }
+
+  button[type='submit'] {
+    @apply text-[var(--buttonText)] bg-[var(--buttonBG)] hover:bg-[var(--buttonActive)];
+  }
+
+  .notice {
+    @apply text-center text-xs;
+
+    a {
+      @apply hover:opacity-50;
+    }
+  }
+
+  [data-formrun-show-if-error] {
+    @apply text-[10px] text-red-600;
+  }
+</style>
+
+<!-- class, action, methodを変更しないでください -->
+<form
+  class="formrun"
+  action="https://form.run/api/v1/r/gldvsbh2srvqfoifq12g86ka"
+  method="post"
+>
+  <div class="text-center mb-8 lg:m-0">
+    <h2 class="font-bold text-xl xl:text-2xl">
+      まずは資料請求<small class="font-normal">（1分）</small>
+    </h2>
+    <p class="text-[0.7rem] leading-[1.25rem]">
+      下記フォームにご記入の上、送信ください。
+    </p>
+  </div>
+
+  <!-- ↓自由に要素を追加・編集することができます -->
+  <div class="form-row">
+    <label class="会社名">会社名<span class="badge-req">必須</span></label>
+    <input
+      name="会社名"
+      id="会社名"
+      type="text"
+      placeholder="例）アルク エデュケーション"
+      data-formrun-required
+    />
+    <div data-formrun-show-if-error="会社名">会社名を入力してください</div>
+  </div>
+
+  <div class="form-row">
+    <label class="お名前">お名前<span class="badge-req">必須</span></label>
+    <input
+      name="お名前"
+      id="お名前"
+      type="text"
+      placeholder="例）アルク 太郎"
+      data-formrun-required
+    />
+    <div data-formrun-show-if-error="お名前">お名前を入力してください</div>
+  </div>
+
+  <div class="form-row">
+    <label for="メールアドレス"
+      >メールアドレス（法人）<span class="badge-req">必須</span>
+    </label>
+    <input
+      name="メールアドレス"
+      id="メールアドレス"
+      type="email"
+      inputmode="email"
+      placeholder="example@mail.com"
+      data-formrun-type="email"
+      data-formrun-required
+    />
+    <div data-formrun-show-if-error="メールアドレス">
+      メールアドレスを正しく入力してください
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="電話番号">電話番号<span class="badge-req">必須</span></label>
+    <input
+      type="tel"
+      name="電話番号"
+      id="電話番号"
+      inputmode="tel"
+      data-formrun-type="tel"
+      data-formrun-required
+    />
+    <div data-formrun-show-if-error="電話番号">
+      電話番号を正しく入力してください
+    </div>
+  </div>
+
+  <!-- <div class="form-row">
+      <label for="貴社所在エリア"
+        >貴社所在エリア <span class="badge-req">必須</span>
+      </label>
+
+      <select name="貴社所在エリア" id="貴社所在エリア" data-formrun-required>
+        <option value="" selected disabled>選択してください</option>
+        <option value="北海道、東北、関東、甲信越地域"
+          >北海道、東北、関東、甲信越地域</option
+        >
+        <option value="東海、北陸地域">東海、北陸地域</option>
+        <option value="近畿、中国、四国地域">近畿、中国、四国地域</option>
+        <option value="九州、沖縄地域">九州、沖縄地域</option>
+        <option value="海外">海外</option>
+      </select>
+
+      <div data-formrun-show-if-error="貴社所在エリア">
+        貴社所在エリアを選択してください
+      </div>
+    </div> -->
+
+  <!-- ボット投稿をブロックするためのタグ -->
+  <div class="_formrun_gotcha">
+    <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+    <input
+      type="text"
+      name="_formrun_gotcha"
+      id="_formrun_gotcha"
+      tabindex="-1"
+    />
+  </div>
+
+  <div class="form-action">
+    <button
+      class="block cursor-pointer font-bold w-full h-12 shadow-md"
+      type="submit"
+      data-formrun-error-text="未入力の項目があります"
+      data-formrun-submitting-text="送信中...">送信する</button
+    >
+  </div>
+
+  <p class="notice">
+    <a
+      class="underline underline-offset-2"
+      href="https://www.alc-education.co.jp/privacy-policy/2104.html"
+      target="_blank"
+      rel="noopener">プライバシーポリシー</a
+    ><br class="sm:hidden" />をお読みの上、同意して送信してください。
+  </p>
+</form>

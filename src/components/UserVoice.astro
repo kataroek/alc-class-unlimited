@@ -1,0 +1,89 @@
+---
+import CallToAction from './CallToAction.astro';
+import userVoice1 from '/img/user-voice-1.svg';
+import userVoice2 from '/img/user-voice-2.svg';
+import userVoice3 from '/img/user-voice-3.svg';
+
+const uservoices = [
+  {
+    img: {
+      src: `${userVoice1}`,
+      alt: '1名から導入可能など、柔軟なサービスに魅力を感じる。'
+    },
+    title: '1名から導入可能など、<br>柔軟なサービスに魅力を感じる。',
+    meta: 'IT関連会社'
+  },
+  {
+    img: {
+      src: `${userVoice2}`,
+      alt: '他者からの刺激が受けられることや運営に手間がかからないことに魅力を感じる。'
+    },
+    title:
+      '他者からの刺激が受けられることや運営に手間がかからないことに魅力を感じる。',
+    meta: '大手システム会社'
+  },
+  {
+    img: {
+      src: `${userVoice3}`,
+      alt: '受講頻度等で本人の学習意欲が図れる点が良いと感じます。'
+    },
+    title: '受講頻度等で本人の学習意欲が図れる点が良いと感じます。',
+    meta: '大手メーカー'
+  }
+];
+---
+
+<section
+  class="bg-white relative py-10 after:absolute after:left-0 after:w-full after:bottom-0 after:bg-[#F4F4F4] after:h-[calc(50%+40px)] md:py-20"
+>
+  <div class="max-w-[1040px] mx-auto px-5 relative z-10">
+    <header class="mb-10">
+      <h2 class="font-bold text-3xl md:text-4xl">
+        <small
+          class="block font-quicksand font-medium text-[#00719B] text-[0.5em]"
+          >User's Voice</small
+        >
+        <span class="block">採用をご検討中の研修ご担当者様の声</span>
+      </h2>
+    </header>
+
+    <div class="max-w-[900px] mx-auto">
+      <div class="grid gap-10 md:grid-cols-3">
+        {
+          uservoices.map((item) => (
+            <div class="flex flex-col">
+              <div class="flex-auto min-h-[160px] flex items-center text-white rounded-3xl bg-[#00719B] p-4 relative">
+                <div class="space-y-4">
+                  <p set:html={item.title} />
+                  <p>
+                    <small set:html={item.meta} />
+                  </p>
+                </div>
+                <svg
+                  class="absolute top-full left-1/2 -translate-x-1/2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="14"
+                  viewBox="0 0 20 14"
+                >
+                  <path
+                    id="Polygon_9"
+                    data-name="Polygon 9"
+                    d="M10,0,20,14H0Z"
+                    transform="translate(20 14) rotate(180)"
+                    fill="#00719b"
+                  />
+                </svg>
+              </div>
+              <div class="w-[180px] h-[180px] mx-auto flex items-end justify-center">
+                <img src={item.img.src} alt={item.img.alt} />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<CallToAction />
